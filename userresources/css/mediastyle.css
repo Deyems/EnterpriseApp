@@ -1,0 +1,108 @@
+@media screen and (min-width: 900px){
+    .navListlinks{
+        display: none;
+    }
+    .navListlinks>*{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .navListlinks{
+        margin: -40% 0;
+    }
+    .nav_buttons{
+        display: none;
+    }
+}
+
+@media screen and (max-width:790px){
+    
+    .cont_1 >:nth-child(1){
+        display: block;
+    }
+    .cont_1 >:nth-child(1)>*{
+        /*flex: 1;*/
+        display: block;
+    }
+    .cont_1 >:nth-child(1)>div>ul{
+        display: block;
+    }
+    .cont_1 nav>:nth-child(1){
+        display: block;
+        position: relative;
+    }
+    .cont_1 nav>:nth-child(1)>:nth-child(1){
+        display: block;
+    }
+
+    /*NAV BAR AREA*/ /*NAV BAR AREA*/
+    .cont_1 nav>:nth-child(1) ul{
+        display: none;
+    }
+
+    .cont_1 nav>:nth-child(1) ul li a{
+        display: block;
+        /*padding: 2% 3%;*/
+        transition: all 0.5s;
+    }
+
+    .cont_1 nav>:nth-child(1) ul li a:hover{
+        color: var(--a-hover-color);
+        padding-left: 6%;
+    }
+
+    .nav_buttons{
+        display: block;
+        background: white;
+        position: absolute;
+        left: 80%;
+        top: 1.7%;
+    }
+
+    .nav_buttons>*{
+        display: block;
+    }
+
+    .nav_buttons2{
+        margin-top:2px;
+    }
+    
+    .container{
+        display: block;
+    }
+    .container>:nth-child(1){
+        display: block;
+    }
+
+    .diamond{
+        margin-top: 5%;
+    }
+
+    .container>:nth-child(2)>:nth-child(1)>:nth-child(2){
+        display: block;
+    }
+    .container>:nth-child(2)>:nth-child(1)>:nth-child(2)>div{
+        display: block;
+    }
+    .container>:nth-child(2)>:nth-child(1)>:nth-child(2)>form{
+        display: block;
+    }
+
+    footer section{
+        display: block;
+    }
+    footer section>:nth-child(2)>div{
+        display: block;
+    }
+    footer section>:nth-child(2)>div>*{
+        display: inline;
+    }
+}
+
+@media screen and (max-width:400px){
+    .diamond{
+        display: none;
+    }
+
+}

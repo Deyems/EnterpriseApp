@@ -1,0 +1,591 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: Trebuchet;
+    src: url(../fontsused/Trebuchet\ MS.ttf);
+    font-style: normal;
+}
+
+@font-face{
+    font-family: organo;
+    src: url(../fontsused/Organo.ttf);
+    font-style: normal;
+}
+
+@font-face{
+    font-family: Verdana;
+    src: url(../fontsused/Verdana.ttf);
+    font-style: normal;
+}
+
+@font-face{
+    font-family: cursive;
+    src: url(../fontsused/monotype\ corsiva.ttf);
+    font-style: normal;
+}
+
+/*GLOBAL VARIABLES*/
+body{
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Open Sans', 'Helvetica Neue', sans-serif; */
+    background-color: white;
+}
+
+*:root{
+    --color: rgba(3,24,32,0.87);
+    --box-shadow: 2px 3px 10px rgb(100, 100, 100);
+    --hover-box-shadow: 2px 4px 20px rgb(100, 100, 100);
+}
+
+h1{
+    color: rgba(3, 24, 32, 0.87);
+    font-family: Verdana;
+}
+
+h1,p{
+    margin: 4% 0;
+}
+
+p{
+    /* color: rgb(37, 37, 37); */
+    font-family: Trebuchet;
+}
+/*END OF GLOBAL VARIABLES*/
+
+/*CONTACT FORM PAGE STYLES*/
+.contactform{
+    width: 80%;
+    margin: auto;
+}
+.contactform>div{
+    text-align: center;
+    margin: 3% 0;
+}
+
+.contactform form>div{
+    margin:1% 0;
+}
+
+.contactform p, .contactform h2{
+    color: white;
+    margin:0;
+}
+
+.contactform h2{
+    font-size: 3rem;
+}
+
+.contactform p{
+    font-size: 1.3rem;
+}
+
+.contactform form input,.contactform form textarea{
+    width: 65%;
+    padding: 1% 1%;
+    resize: none;
+}
+
+.contactform form input[type="text"]{
+    height: 50px;
+}
+
+.contactform form input[type="submit"]{
+font-size: 1.3rem;
+color: rgb(35, 235, 241);    
+padding: 8px;
+background-color: rgb(4, 51, 53);
+transition: all 1s;
+border: none;
+
+}
+
+.contactform form input[type="submit"]:hover{
+color: rgb(4, 51, 53);
+background-color: rgb(15, 165, 170);
+}
+
+.contactform a{    
+display: inline-block;
+width:200px;
+font-size: 1.3rem;
+color: rgb(35, 235, 241);    
+padding: 12px;
+border-radius: 10px;
+background-color: rgb(4, 51, 53);
+margin: 2% 0;
+transition: all 1s;
+}
+
+.contactform a:hover{
+color: rgb(4, 51, 53);
+background-color: rgb(15, 165, 170);
+}
+
+/*STYLING THE NAV_BAR OR MENU BAR*/
+/*STYLING THE NAV_BAR OR MENU BAR*/
+
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(3, 24, 32, 0.767);
+    background-blend-mode: soft-light;
+    /*box-shadow: 0 3px 5px rgb(201, 215, 216);*/
+    height: 15vh;
+    top:0;
+    transition: top 0.5s;
+}
+
+nav>:nth-child(1){ 
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img{
+    width: 80px;
+    height: 70px;
+    border-radius: 20%;
+}
+
+nav>:nth-child(1)>:nth-child(1){
+    padding: 0.9% 0;
+    /*border: 1px solid orangered;*/
+}
+
+nav>:nth-child(1)>:nth-child(2){
+    /*border: 1px solid rgb(7, 130, 134);*/
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+nav>:nth-child(1)>:nth-child(2)>*{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4% 0;
+}
+
+nav>:nth-child(1)>:nth-child(2)>:nth-child(1){
+    width: 65%;
+}
+
+nav>:nth-child(1)>:nth-child(2)>:nth-child(2){
+    width: 35%;
+}
+
+nav>:nth-child(1)>:nth-child(2) a{
+    display: block;
+    font-size: 1.4rem;
+    font-family: organo;
+    color: rgb(35, 235, 241);
+    /* text-transform: capitalize; */
+    /* text-shadow: 0px 2px 2px white; */
+}
+
+nav>:nth-child(1)>:nth-child(2) a:hover{
+    color: rgb(7, 130, 134);
+}
+
+/*NAV LINK STUFF*/
+nav>:nth-child(1)>:nth-child(3){
+    padding: 0.8%;
+    display: none;
+}
+
+nav>:nth-child(1)>:nth-child(3)>:nth-child(1){
+    width: 60px;
+    cursor: pointer;
+    border: 3px solid rgb(89, 166, 168);
+}
+
+nav>:nth-child(1)>:nth-child(3)>:nth-child(1)>*{
+    height: 5px;
+    width: 80%;
+    margin: 20% auto;
+    background-color: rgb(89, 166, 168);
+}
+
+/*STYLING THE MOBILE SCREEN MENUBAR*/
+.navListlinks{
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    transition: all 1s;
+    z-index: 100000;
+}
+
+.navListlinks li{
+    width: 100%;
+    border: 1px solid white;
+}
+
+.navListlinks li a{
+    display: block;
+    font-size: 1.4rem;
+    font-family: organo;
+    color: rgb(35, 235, 241);
+    background-color: rgba(3, 24, 32,1);
+    padding: 5% 3%;
+    transition: all 1s;
+}
+
+.navListlinks li a:hover{
+color: rgb(7, 130, 134);
+padding: 5% 7%;
+}
+
+.collapse{
+    height: 550px;
+}
+
+/*Affects the Developers on the Ul list down*/
+
+/*END OF STYLING THE MOBILE SCREEN MENUBAR*/
+
+
+/*END OF NAV_BAR OR MENU_BAR*/
+
+/*HEADER WITH THE BACKGROUND IMAGE*/
+.hidden{
+    opacity:1;
+}
+
+.visible{
+    opacity: 1;
+}
+
+header{
+    min-height: 100vh;
+    width: 100%;
+    background: url("../images/app-cellphone-device-870903.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(3, 24, 32, 0.87);
+    background-blend-mode: soft-light;
+    /*overflow: hidden;*/
+    box-shadow: var(--box-shadow);
+    transition: opacity 1.2s;
+}
+
+/*GLOBAL MAIN TAG STYLE*/
+main{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 15px;
+}
+
+main a{
+    display: inline-block;
+    width:200px;
+    font-family: Trebuchet;
+    font-size: 1.3rem;
+    color: rgb(35, 235, 241);    
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgb(4, 51, 53);
+    transition: all 1s;
+}
+
+main a:hover{
+    color: rgb(4, 51, 53);
+    background-color: rgb(15, 165, 170);
+}
+/*END OF GLOBAL MAIN TAG STYLE*/
+
+
+/*STYLING INSIDE THE HEADER*/
+
+header main h1{
+    font-size: 3rem;
+    color: white;
+}
+
+header main p{
+    font-size: 1.3rem;
+    color: white;
+    text-transform:  capitalize;
+}
+
+header main{
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0;
+    align-self: center;
+}
+
+header main>*{
+    /*border: 1px solid;*/
+    margin: 3% 0;
+}
+
+/*STYLING AFTER THE HEADER
+    THIS IS THE UNIQUE FEATURES IN THE HTML
+*/
+.wrapper>:nth-child(3){
+    padding:90px 0;
+    border-bottom: 2px solid rgb(4, 51, 53);
+    min-height: 600px;
+}
+
+.wrapper>:nth-child(3)>:nth-child(1){ /*WHAT WE OFFER*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wrapper>:nth-child(3)>:nth-child(1)>:nth-child(1)>*{
+    margin: 2% 0;
+}
+
+/*THIS IS THE FONT-AWESOME PART OF WHAT WE OFFER*/
+.wrapper>:nth-child(3)>:nth-child(1)>:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,3fr));
+    grid-gap: 5%;
+    justify-content: space-evenly;
+}
+
+.fa-5x{
+    color:rgb(4, 51, 53);
+}
+
+.wrapper>:nth-child(3)>:nth-child(1)>:nth-child(2)>*{
+    border-radius: 10px;
+    border: 1px solid rgb(189, 246, 248);
+    padding: 5% 3%;
+    margin: 2% 0;
+    transition: box-shadow 0.5s;
+}
+
+.wrapper>:nth-child(3)>:nth-child(1)>:nth-child(2)>*:hover{
+    box-shadow: var(--hover-box-shadow);
+}
+
+/*END OF WHAT WE OFFER*/
+
+/*STYLING OF THE DESCRIPTION OF SERVICES AREA*/
+.wrapper>:nth-of-type(2)>*{
+    padding: 10% 0;
+}
+
+.wrapper>:nth-of-type(2)>:nth-child(1)>*{
+    display: flex;
+    flex-direction: column;
+    align-items:  flex-start;
+    justify-content:  space-between;
+    border-radius: 10px;
+    padding: 5% 7%;
+    margin: 2% 2%;
+    box-shadow: var(--box-shadow);
+    text-transform:  capitalize;
+    transition: box-shadow 0.5s;
+    min-height: 200px;
+}
+
+.wrapper>:nth-of-type(2)>:nth-child(1)>*:hover{
+    box-shadow: var(--hover-box-shadow);
+}
+
+
+/*END OF THE DESCRIPTION OF SERVICES AREA ||*/
+/*END OF THE DESCRIPTION OF SERVICES AREA ||*/
+
+.wrapper>:nth-child(5){
+    border-bottom: 2px solid rgb(4, 51, 53);
+    padding: 5% 0;
+}
+
+.wrapper>:nth-child(5)>:nth-child(1){
+    background-color: rgba(4, 51, 53, 0.815);
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 3%;
+    box-shadow: 0px 5px 5px 0px rgba(94, 92, 92, 0.966);
+}
+
+.counters h3{
+    color: rgba(1, 43, 44, 0.945);
+}
+
+.counters main>div{
+    flex: 1;
+    text-align: center;
+}
+
+/*STYLING THE COUNTERS SECTION*/ /*STYLING THE COUNTERS SECTION*/
+.numbers{
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 2% 4%;
+}
+
+/*TESTIMONIAL SECTION*/ /*TESTIMONIAL SECTION*/  /*TESTIMONIAL SECTION*/
+
+.foot{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /*flex-wrap: wrap;*/
+    background-color: transparent;
+    padding: 3% 0;
+    /*border: 1px solid;*/
+}
+.foot div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content:  flex-end;
+    text-align: center;
+    padding: 2% 5%;
+    margin: 0% 2%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgb(4, 51, 53);
+    transition: box-shadow 0.5s;
+}
+
+.foot div:hover{
+    box-shadow: 2px 4px 20px rgb(4, 51, 53);
+}
+
+.foot img{
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+}
+.fa-3x{
+    color:rgba(3, 24, 32, 0.87);
+    /*background-color:orange;*/
+}
+
+/*FOOTER SECTION*/ /*FOOTER SECTION*/ /*FOOTER SECTION*/
+.bottom{
+    background-color: rgba(9, 15, 15, 0.322);
+    padding-top: 5%;
+    padding-bottom: 2%;
+    height: auto;
+}
+
+.bottom h4{
+    color: rgba(3, 24, 32, 0.87);
+    font-size: 1.2rem;
+    text-transform: Capitalize;
+}
+
+.bottom main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom main>:nth-child(1),.bottom main>:nth-child(2),.bottom main>:nth-child(3){
+    flex:1;
+    padding: 0 4%;
+}
+
+.bottom main>:nth-child(1) span{
+    padding: 5% 0;
+    color: rgb(63, 62, 62);
+    display: block;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.bottom main>:nth-child(1) span:hover{
+    padding: 5% 3%;
+    color: rgb(4, 51, 53);
+}
+
+.bottom main>:nth-child(2) figure{
+    border-radius: 100%;
+    width:200px;
+    text-align: center;
+}
+
+.bottom main>:nth-child(2) img{
+    border-radius: 100%;
+    height:80%;
+    width: 85%;
+    opacity: 0.3;
+    box-shadow: 4px 5px 24px rgba(94, 92, 92, 0.966);;
+}
+
+.bottom main>:nth-child(3){
+    position: relative;
+    min-height: 250px;
+}
+
+.bottom main>:nth-child(3)>div{
+    border-radius: 100%;
+    position: absolute;
+    height: 40px;
+    padding: 3% 2%;
+}
+
+.bottom main>:nth-child(3)>div span{
+    cursor: pointer;
+}
+
+.bottom main>:nth-child(3)>:nth-child(2){
+    left:2%;
+    top:10%;
+    color: rgb(1, 1, 65);
+}
+
+.bottom main>:nth-child(3)>:nth-child(3){
+    left:20%;
+    top:30%;
+    color: skyblue;
+}
+
+.bottom main>:nth-child(3)>:nth-child(4){
+    left:40%;
+    top:50%;
+    color: green;
+}
+
+.bottom main>:nth-child(3)>:nth-child(5){
+    left:60%;
+    top: 70%;
+    color: purple;
+}
+
+.bottom>:nth-child(2){
+    text-align: center;
+    border-top: 2px solid rgb(4, 51, 53);
+    margin-top: 1.5%;
+}
+
+.bottom a{
+    background-color: transparent;
+    border-radius: 0px;
+    color: rgb(60, 60, 202);
+    margin: 2% 0;
+    font-family: cursive;
+    text-transform: Capitalize;
+    padding: 0;
+}
+
+.bottom main a:hover{
+    color: rgba(17, 2, 59, 0.836);
+    /*color: white;*/
+    background-color: transparent;
+}
